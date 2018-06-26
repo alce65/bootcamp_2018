@@ -2,9 +2,16 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Blog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Aleajndro Cerezo">
+        <meta name="description" content="Sitio Web del Curso ....">
+        <title>Clean Blog - Post</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,26 +21,26 @@
     <nav>
         <ul>
             <li>
-                <a href="./index1.html#home">Home</a>
+                <a href="./index.html#home">Home</a>
             </li>
             <li>
-                <a href="./index1.html#about">About</a>
+                <a href="./index.html#about">About</a>
             </li>
             <li>
                 <a href="./post1.html#full_post">Sample Post</a>
             </li>
             <li>
-                <a href="./index1.html#contact">Contact</a>
+                <a href="./index.html#contact">Contact</a>
             </li>
         </ul>
     </nav>
     <section id="full_post">
         <header>
-            <h1>Man must explore, and this is exploration at its greatest</h1>
+            <h1 class="h1-section-post">Man must explore, and this is exploration at its greatest</h1>
             <p>Problems look mighty small from 150 miles up</p>
             <footer>Posted by Start Bootstrap on August 24, 2018</footer>
         </header>
-        <article>
+        <article class="content-wrapper">
                 <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe,
                         having the qualities of a globe, a round earth in which all the directions eventually meet, in which
                         there is no center because every point, or none, is center — an equal earth which all men occupy as equals.
@@ -86,20 +93,37 @@
         </article>
     </section>
     <footer>
-            <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Twiter</a>
-                        </li>
-                        <li>
-                            <a href="#">Facebook</a>
-                        </li>
-                        <li>
-                            <a href="#">Github</a>
-                        </li>
-                    </ul>
-                </nav>
-                <p><small>Copyright © Your Website 2018</small></p>        
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" title="Twitter">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Facebook">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Github">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Copyright © Your Website 2018</small>
+        </p>
     </footer>
 </body>
 

@@ -1,0 +1,88 @@
+:root {
+    --color-texto: rgb(0, 0, 0);
+    --color-fondo: white; 
+    --color-boton: darkcyan;
+}
+
+
+body {
+    background-color: bisque;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* h1 en el header principal: 1.25rem
+h1 en el header de sección: 5rem
+h1 en el header de section/post: 3.5rem */
+
+/* .h1-main {
+    font-size: 1.25rem;
+}
+.h1-section {
+    font-size: 5rem;
+}
+
+.h1-section-post {
+    font-size: 3.5rem;
+} */
+ 
+body>header h1 { font-size: 1.25rem;}
+section h1 {font-size: 5rem;}
+section#full_post  h1 {font-size: 3.5rem;}
+
+
+ article p:nth-of-type(1) {
+     font-size: 1.1rem;
+ }
+
+section h1 {
+     margin: 0;
+ }
+article p {
+    font-family: 'Lora', serif;
+}
+
+
+section header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--color-fondo);
+}
+
+section#home header {
+    background-image: url(./assets/home-bg.jpg);
+}
+section#about header{
+    background-image: url(./assets/about-bg.jpg)
+}
+
+section#contact header{
+    background-image: url(./assets/contact-bg.jpg)
+}
+
+section#full_post header{
+    background-image: url(./assets/post-bg.jpg)
+}
+
+section .content-wrapper {
+    width: 60%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+body>header, nav {
+    border: 1px solid black;
+    width: 40%;
+}
+
+nav li {
+    display: inline-block;
+}
+nav a {
+    display: block;
+    padding: .5rem 1rem;
+}
+
