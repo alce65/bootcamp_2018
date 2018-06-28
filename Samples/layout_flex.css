@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-color: rgba(0,0,0,.1);
+	font: 1.1rem sans-serif;
+	text-transform: uppercase;
+	color: white;
+}
+.grid{
+	padding: 1rem;
+}
+.item{
+    padding: 1.5rem;
+    margin: 1rem 0;
+	border-radius: .3rem;
+    background-color: #E92763;
+    min-height: 10vh;
+}
+
+ .flex_wrapper {
+    display:flex;
+    /* flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+}
+
+
+nav, aside {
+    flex: 1 1 20%;
+}
+main {
+     flex: 1 1 60%;
+} 
+

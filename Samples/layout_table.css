@@ -18,3 +18,18 @@ body{
     background-color: #E92763;
     min-height: 10vh;
 }
+
+.table_wrapper {
+    display:table;
+    width: 100%;
+}
+
+nav, aside {
+    width: 20%;
+    display: table-cell;
+}
+main {
+    width: 60%;
+    display: table-cell;
+}
+
