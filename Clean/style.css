@@ -32,45 +32,19 @@ h1 en el header de section/post: 3.5rem */
 body>header h1 { font-size: 1.25rem;}
 section h1 {font-size: 5rem;}
 section#full_post  h1 {font-size: 3.5rem;}
+/* Solo los articulos de Home tienen h2*/
+article h2 { font-size: 2.25rem}
 
- article p:nth-of-type(1) {
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
+
+article p:nth-of-type(1) {
      font-size: 1.1rem;
- }
+}
 
 article p {
     font-family: 'Lora', serif;
-}
-
-/* SECCIONES */ 
-
-section header {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: var(--color-fondo);
-}
-
-section#home header {
-    background-image: url(./assets/home-bg.jpg);
-}
-section#about header{
-    background-image: url(./assets/about-bg.jpg)
-}
-
-section#contact header{
-    background-image: url(./assets/contact-bg.jpg)
-}
-
-section#full_post header{
-    background-image: url(./assets/post-bg.jpg)
-}
-
-section .content-wrapper {
-    width: 60%;
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Elementos iniciales: Header y Nav*/
@@ -113,13 +87,32 @@ body>header {
     width: 50%;
 }
 
+/* SECCIONES */ 
 
-/* Secciones 
-HEADER interno con IMAGEN DE FONDO
-*/
+/* HEADER interno con IMAGEN DE FONDO */
 
 section header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--color-fondo);
     position: relative;
+}
+
+section#home header {
+    background-image: url(./assets/home-bg.jpg);
+}
+section#about header{
+    background-image: url(./assets/about-bg.jpg)
+}
+
+section#contact header{
+    background-image: url(./assets/contact-bg.jpg)
+}
+
+section#full_post header{
+    background-image: url(./assets/post-bg.jpg)
 }
 
 section .title-wrapper {
@@ -139,10 +132,41 @@ section header::after {
     bottom: 0;
     right: 0;
     background-color: var(--color-texto);
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
-section header h1 {
+section .content-wrapper {
+    width: 75%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+/* Botones*/
+
+section .boton-wrapper {
+    margin: 1rem;
+    display:flex;
+    flex-direction: row-reverse;
+}
+
+section .boton {
+    display: block;
+    color: var(--color-fondo);
+    background-color: var(--color-boton);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif; 
+}
+
+/* Section HOME (POSTS) */
+
+section#home header h1 {
     font-size: 0.2rem;
     animation: titulo 3s linear;
     animation-fill-mode: forwards;
@@ -175,10 +199,15 @@ section header h1 {
     }
   }
 
-/* Section HOME (POSTS) */
+section#home article {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-autores)
+}
 
 section#home article>p{
     font-size: 1.75rem;
+    margin-top: 1rem;
 }
 
 section#home footer {
@@ -192,28 +221,6 @@ section#home footer .autor {
     font-weight: 900;
 }
 
-section#home article {
-    border-bottom: 1px solid var(--color-autores)
-}
-
-section#home .boton-wrapper {
-    margin: 1rem;
-    display:flex;
-    flex-direction: row-reverse;
-}
-
-section#home .boton {
-    display: block;
-    color: var(--color-fondo);
-    background-color: var(--color-boton);
-    font-size: 14px;
-    font-weight: 800;
-    padding: 15px 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 0;
-    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif; 
-}
 
 /* Section ABOUT*/
 
@@ -222,8 +229,43 @@ section#about p {
     margin: 1.8rem 0; 
 }
 
+/* Section CONTACT */
+
+section#contact p {
+    line-height: 1.5;
+    margin: 1.8rem 0; 
+}
+
+section#contact ul {
+    margin-bottom: 1rem;
+}
+
+section#contact li {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-autores);
+    
+}
+
+section#contact label {
+    display: none;
+}
+
+section#contact input, section#contact textarea {
+    width: 100%;
+    border: 0px solid;
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+    color:  var(--color-autores);
+}
+
 
 /* POST FULL*/
+
+section#full_post h1, p, footer {
+    text-align: left;
+    margin-bottom: 1rem;
+}
 
 figure.imagen {
     width: 40%;
@@ -237,17 +279,17 @@ div.columnas {
 
 /* Footer*/
 
-footer {
+body>footer {
     margin-top: 2rem;
     border-top: 1px solid var(--color-autores);
     padding-top: 3rem;
     text-align: center;
 }
 
-footer nav {
+body>footer nav {
     font-size: .8rem;
 }
 
-footer small {
+body>footer small {
     color: var(--color-autores);
 }

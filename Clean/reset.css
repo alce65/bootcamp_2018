@@ -2,17 +2,17 @@
     box-sizing: border-box
 }
 
-body, h1, h2, h3 {
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
 
-nav ul, nav li {
+nav ul, nav li, form ul, form li {
     margin: 0;
     padding: 0; 
 }
 
-nav ul {
+nav ul, form ul {
     list-style: none;
 }
 
