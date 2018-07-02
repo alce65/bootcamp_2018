@@ -1,0 +1,18 @@
+body{
+	font: 3rem sans-serif;
+	background-color: rgba(0,0,0,.2);
+	color: white;
+}
+.grid-item:nth-child(2n){
+	background-color: #1A83B5;
+}
+.grid-item:nth-child(2n+1){
+	background-color: #37A8E0;
+}
+.grid{
+	padding: 1rem;
+}
+.grid-item{
+	padding: 1.5rem;
+	border-radius: 1rem;
+}
