@@ -1,0 +1,25 @@
+{
+  "contactos": [
+    {
+      "id": 1,
+      "nombre": "Pepe",
+      "apellido": "Pérez",
+      "telefono": "123-123-123",
+      "email": "pperez@mail.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Luis",
+      "apellido": "Gomez",
+      "telefono": "654-654-654",
+      "email": "lgomez@algo.es"
+    },
+    {
+      "nombre": "Alejandro",
+      "apellido": "Cerezo",
+      "telefono": "626687369",
+      "email": "alce65@hotmail.es",
+      "id": 3
+    }
+  ]
+}

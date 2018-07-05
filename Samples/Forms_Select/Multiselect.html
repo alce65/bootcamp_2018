@@ -1,0 +1,98 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Select Options - JS</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Ejercicios del Curso CMF">
+        <meta name="author" content="Alejandro">
+        <meta name="keywords" content="javascript">
+        <link rel="shortcut icon" href="fav_icon.png">
+		<script>
+
+
+			function main() {	//envio de evento a la funcion manejadora.
+			    var aGeneros = ["Ciencia Ficcion", "Ciberpunk", "Fantasía", "Terror", "Policiaca"];
+			    var oAutores = {
+			        "Ciencia Ficcion": ["Isaac Asimov", "Robetr A. Heinlein", "Philip K. Dick", "Frank Herbert", "Orson Scott Card", "Arthir C. Clarke", "Jack Vance", "Poul Anderson", "Robert Silverberg", "Brian W. Aldiss"], 
+			        "Ciberpunk": ["William Gibson", "Bruce Sterling", "Neal Stephenson", "George Alec Effinger"],
+			        "Fantasía": ["Robert E. Howard", "J.R.R. Tolkien", "Terry Pratchett", "George R.R. Martin", "Tim Powers", "Ursula K. Le Guin", "Michael Moorcock", "Fritz Leiber"], 
+			        "Terror": ["J. Sheridan Le Fanu", "Bran Stoker", "M.R. James", "H.P. Lovecraft", "Stephen King"],
+			        "Policiaca": ["Georges Simenon", "Arthur Conan Doyle", "Maurice Leblanc", "Edgar Allan Poe", "Agatha Christie", "Erle Stanley Gardner"] 
+			    };
+			    var sSelectedGenero;
+			    var sSelectedAutor;
+                // nodos del DOM
+			    var domSelecGeneros = document.querySelector("#generos");
+			    var domSelecAutores = document.querySelector("#autores");
+			    var domBoton = document.getElementById('boton');
+                //manejadores
+			    domSelecGeneros.addEventListener("change", cambioGenero);
+			    domSelecAutores.addEventListener("change", cambioAutores);
+			    domBoton.addEventListener("click", enviar);
+			    // configuración inicial
+			    domSelecAutores.disabled = true;
+			    domBoton.disabled = true;
+			    cargarSelect(domSelecGeneros, aGeneros);
+
+			    function enviar() {
+			        return confirm("Desaa solicitar los datos de " + sSelectedAutor);
+			    }
+
+			    function cambioAutores(oE) {
+			        var domSelect = oE.currentTarget;
+			        if (domSelect.childElementCount > oAutores[sSelectedGenero].length) {
+			            domSelect.removeChild(domSelect.children[0]);
+			        }
+			        var nSelect = domSelect.selectedIndex;
+			        var domOption = domSelect.options[nSelect]
+			        sSelectedAutor = domOption.text;
+			        domBoton.disabled = false;
+			    }
+
+			    function cambioGenero(oE) {
+			        var domSelect = oE.currentTarget;
+			        if (domSelect.childElementCount > aGeneros.length) {
+			            domSelect.removeChild(domSelect.children[0]);
+			        }
+			        var nSelect = domSelect.selectedIndex;
+			        var domOption = domSelect.options[nSelect];
+			        sSelectedGenero = domOption.text;
+			        cargarSelect(domSelecAutores, oAutores[sSelectedGenero]);
+			        domSelecAutores.disabled = false;
+			    }
+
+			    function cargarSelect(oDom, aDatos) {
+			        oDom.innerHTML = "<option> </option>";
+			        domBoton.disabled = true;
+			        for (var i = 0; i < aDatos.length; i++) {
+			            oDom.innerHTML += "<option>" + aDatos[i] + "</option>";
+			        }
+			    }
+			};//fin del onload
+
+
+			if (document.addEventListener) {
+			    document.addEventListener("DOMContentLoaded", main, false);
+			    //metodo de DOM nivel 2  que indica al agente de usuario que permanezca atento:
+			    // evento: en este caso la carga completa de la página
+			    // función a lanzar: en este caso iniciaBoton
+			    // orden del flujo de eventos: false salta la fase de captura
+			} else {
+			    window.onload = main;
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1>Formulario</h1>
+		<form  name="formulario" id="formulario">			
+            <select name="Generos" id="generos">
+            </select>
+            <select name="Autores" id="autores">
+            </select>
+            <button type="button" name="boton" id="boton">Libros</button>					
+		</form>
+		<p id="parrafo"> </p>
+	</body>
+</html>

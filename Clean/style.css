@@ -48,7 +48,6 @@ article p {
 }
 
 /* Elementos iniciales: Header y Nav*/
-
 body>header, body>nav {
     color: var(--color-fondo);
 }
@@ -83,7 +82,6 @@ nav.menu-icon {
 nav.menu-bottom {
     background-color: var(--color-autores)
 }
-
 body>header {
     position: absolute;
     z-index: 1;
@@ -254,11 +252,12 @@ section#contact li {
     
 }
 
-section#contact label {
+section#contact li.form-group label {
     display: none;
 }
 
-section#contact input, section#contact textarea {
+section#contact li.form-group input, 
+section#contact li.form-group textarea {
     width: 100%;
     border: 0px solid;
     font-size: 1.5rem;
@@ -309,6 +308,8 @@ body>footer small {
 
     nav.menu-top {
         display: block;
+        position: fixed;
+        background-color: var(--color-autores)
     }
     
     body>nav a:hover {
@@ -322,4 +323,9 @@ body>footer small {
         max-width: 40rem;
         margin-top: 2rem;
     }
+
+    .active {
+        color:maroon;
+    }
 }
+
